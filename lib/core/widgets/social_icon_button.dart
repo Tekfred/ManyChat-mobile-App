@@ -20,10 +20,10 @@ class SocialIconButton extends StatelessWidget {
         width: 52,
         height: 52,
         decoration: BoxDecoration(
-          color: backgroundColor ?? const Color(0xFF1F222A),
+          color: backgroundColor ?? const Color(0xFF1E1E1E),
           borderRadius: BorderRadius.circular(14),
           border: Border.all(
-            color: Colors.white12,
+            color: Colors.white24,
             width: 1.5,
           ),
         ),

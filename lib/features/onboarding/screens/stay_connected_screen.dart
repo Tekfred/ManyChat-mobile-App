@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart'; 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/social_icon_button.dart';
 import '../widgets/floating_messages_screen.dart';
@@ -7,11 +8,19 @@ import '../widgets/mail_icon_badge.dart';
 class StayConnectedScreen extends StatelessWidget {
   const StayConnectedScreen({super.key});
 
+  Future<void> _launchURL(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final headlineStyle = Theme.of(context).textTheme.headlineSmall?.copyWith(
       fontWeight: FontWeight.bold,
       color: Colors.white,
+      fontSize: 32,
     );
     final bodyStyle = Theme.of(
       context,
@@ -67,47 +76,50 @@ class StayConnectedScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SocialIconButton(
-                        onTap: () {},
+                        backgroundColor: Colors.white,
+                        onTap: () => _launchURL('https://www.apple.com'),
                         child: const Icon(
                           Icons.apple,
-                          color: Colors.white,
-                          size: 26,
+                          color: Colors.black87,
+                          size: 30,
                         ),
                       ),
                       const SizedBox(width: 16),
                       SocialIconButton(
-                        onTap: () {},
+                        backgroundColor: Colors.white,
+                        onTap: () => _launchURL('https://www.google.com'),
                         child: Padding(
                           padding: const EdgeInsets.all(8),
                           child: Image.asset(
                             'assets/images/google.png',
-                            width: 22,
-                            height: 22,
+                            width: 32,
+                            height: 32,
                           ),
                         ),
                       ),
                       const SizedBox(width: 16),
                       SocialIconButton(
                         backgroundColor: const Color(0xFF7B5CF0),
-                        onTap: () {},
+                        onTap: () => _launchURL('https://discord.com'),
                         child: Padding(
                           padding: const EdgeInsets.all(8),
                           child: Image.asset(
-                            'assets/images/discord_logo.png',
-                            width: 22,
-                            height: 22,
+                            'assets/images/discord-icon.png',
+                            width: 32,
+                            height: 32,
                           ),
                         ),
                       ),
                       const SizedBox(width: 16),
                       SocialIconButton(
+                        backgroundColor: Colors.white,
                         onTap: () {
-                          // TODO: Navigator.pushNamed(context, '/login');
+                          // todo:Navigator.pushNamed(context, '/login');
                         },
                         child: const Icon(
                           Icons.arrow_forward,
-                          color: Colors.white,
-                          size: 22,
+                          color: Colors.black87,
+                          size: 30,
                         ),
                       ),
                     ],
