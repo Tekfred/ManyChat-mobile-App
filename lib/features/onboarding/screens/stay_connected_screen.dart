@@ -4,6 +4,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/social_icon_button.dart';
 import '../widgets/floating_messages_screen.dart';
 import '../widgets/mail_icon_badge.dart';
+import '../../auth/screens/login_screen.dart'; 
 
 class StayConnectedScreen extends StatelessWidget {
   const StayConnectedScreen({super.key});
@@ -38,6 +39,8 @@ class StayConnectedScreen extends StatelessWidget {
               right: 0,
               child: FloatingMessageScreen(),
             ),
+
+            
 
             Positioned.fill(
               child: Column(
@@ -114,7 +117,12 @@ class StayConnectedScreen extends StatelessWidget {
                       SocialIconButton(
                         backgroundColor: Colors.white,
                         onTap: () {
-                          // todo:Navigator.pushNamed(context, '/login');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const LoginScreen(),
+                            ),
+                          );
                         },
                         child: const Icon(
                           Icons.arrow_forward,

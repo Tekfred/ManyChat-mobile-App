@@ -6,4 +6,6 @@ class AppColors {
   static const Color cardCream = Color(0xFFFBF3D8);
   static const Color cardGray = Color(0xFFE2E5EA);
   static const Color purpleAccent = Color(0xFF7B5CF0);
+  static const Color authBackground = Color(0xFF7B35C4); 
+  
 }
