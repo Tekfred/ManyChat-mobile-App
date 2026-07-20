@@ -109,11 +109,11 @@ class _SigninScreenState extends State<SigninScreen> {
                         TextField(
                           controller: _passwordController,
                           obscureText: _obscurePassword,
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.poppins(color: Colors.black87),
                           decoration: InputDecoration(
                             hintText: 'Password',
                             hintStyle: GoogleFonts.poppins(
-                              color: Colors.white60,
+                              color: Colors.black45,
                             ),
                             filled: true,
                             fillColor: Colors.white,

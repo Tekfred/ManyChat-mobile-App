@@ -47,13 +47,14 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     'Manychat',
                     style: GoogleFonts.poppins(
-                      fontSize: 38,
+                      fontSize: 48,
                       fontWeight: FontWeight.w800,
                       color: Colors.white,
                       letterSpacing: -0.5,
                     ),
                   ),
 
+                  
                   const Spacer(flex: 3),
 
                   // ── BUTTONS SECTION ──────────────────────────────
@@ -64,20 +65,21 @@ class LoginScreen extends StatelessWidget {
                         // Continue with Apple
                         SizedBox(
                           width: double.infinity,
-                          height: 54,
+                          height: 70,
                           child: ElevatedButton.icon(
                             onPressed: () {},
                             icon: const Icon(
                               Icons.apple,
                               color: Colors.white,
-                              size: 24,
+                              size: 30,
                             ),
                             label: Text(
                               'Continue with Apple',
                               style: GoogleFonts.poppins(
-                                fontSize: 16,
+                                fontSize: 19,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white,
+                                
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
@@ -105,12 +107,7 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(width: 6),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => const SigninScreen(),
-                                  ),
-                                );
+                                
                               },
                               child: Text(
                                 'Sign In',
@@ -129,11 +126,18 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(height: 16),
 
                         // Log In button
-                        SizedBox(
+                        SizedBox(             
                           width: double.infinity,
-                          height: 54,
+                          height: 68,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const SigninScreen(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
@@ -143,8 +147,8 @@ class LoginScreen extends StatelessWidget {
                             child: Text(
                               'Log In',
                               style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w500,
                                 color: Colors.black87,
                               ),
                             ),
