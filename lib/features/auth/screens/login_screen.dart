@@ -15,7 +15,9 @@ class LoginScreen extends StatelessWidget {
         child: Stack(
           children: [
             // ── FLOATING BUBBLES ──────────────────────────────────
-            const Positioned.fill(child: FloatingBubbles()), // ── BACK BUTTON ───────────────────────────────────────────
+            const Positioned.fill(
+              child: FloatingBubbles(),
+            ), // ── BACK BUTTON ───────────────────────────────────────────
             Positioned(
               top: 16,
               left: 16,
@@ -54,7 +56,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  
                   const Spacer(flex: 3),
 
                   // ── BUTTONS SECTION ──────────────────────────────
@@ -79,7 +80,6 @@ class LoginScreen extends StatelessWidget {
                                 fontSize: 19,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white,
-                                
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
@@ -106,9 +106,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             const SizedBox(width: 6),
                             GestureDetector(
-                              onTap: () {
-                                
-                              },
+                              onTap: () {},
                               child: Text(
                                 'Sign In',
                                 style: GoogleFonts.poppins(
@@ -126,7 +124,7 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(height: 16),
 
                         // Log In button
-                        SizedBox(             
+                        SizedBox(
                           width: double.infinity,
                           height: 68,
                           child: ElevatedButton(
@@ -145,7 +143,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             child: Text(
-                              'Log In',
+                              'Sign up',
                               style: GoogleFonts.poppins(
                                 fontSize: 25,
                                 fontWeight: FontWeight.w500,

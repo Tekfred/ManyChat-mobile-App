@@ -80,9 +80,9 @@ class _SigninScreenState extends State<SigninScreen> {
                         TextField(
                           controller: _emailController,
                           keyboardType: TextInputType.emailAddress,
-                          style: GoogleFonts.poppins(color: Colors.white),
+                          style: GoogleFonts.poppins(color: Colors.white, height: 3),
                           decoration: InputDecoration(
-                            hintText: 'Email',
+                            hintText: 'Address',
                             hintStyle: GoogleFonts.poppins(
                               color: Colors.white60,
                             ),
@@ -109,7 +109,7 @@ class _SigninScreenState extends State<SigninScreen> {
                         TextField(
                           controller: _passwordController,
                           obscureText: _obscurePassword,
-                          style: GoogleFonts.poppins(color: Colors.black87),
+                          style: GoogleFonts.poppins(color: Colors.black87, height: 3),
                           decoration: InputDecoration(
                             hintText: 'Password',
                             hintStyle: GoogleFonts.poppins(
@@ -157,10 +157,11 @@ class _SigninScreenState extends State<SigninScreen> {
                               backgroundColor: Colors.black,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
+                               
                               ),
                             ),
                             child: Text(
-                              'Sign In',
+                              'Log in',
                               style: GoogleFonts.poppins(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
