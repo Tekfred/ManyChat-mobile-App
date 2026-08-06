@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 import '../widgets/floating_bubbles.dart';
-import '../../chats/screens/chat_dashboard_screen.dart'; // ← adjust this path to wherever your ChatDashboardScreen actually lives
+import '../../chats/screens/chat_dashboard_screen.dart'; 
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
@@ -21,7 +21,7 @@ class _SigninScreenState extends State<SigninScreen> {
 
 
   // ── MOCK CREDENTIALS (temporary — remove once real backend is connected) ──
-  static const String _mockEmail = 'ansahaudi86@gmail.com';
+  static const String _mockEmail = 'manyChat86@gmail.com';
   static const String _mockPassword = '!!dR3-103';
 
   @override
@@ -66,7 +66,7 @@ class _SigninScreenState extends State<SigninScreen> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) => const ChatDashboardScreen()),
+      MaterialPageRoute(builder: (_) => ChatDashboardScreen()),
     );
   }
 

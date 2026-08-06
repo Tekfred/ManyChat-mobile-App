@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 import '../widgets/floating_bubbles.dart';
 import 'signin_screen.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -93,33 +94,40 @@ class LoginScreen extends StatelessWidget {
 
                         const SizedBox(height: 16),
 
-                        // Already a Member + Sign In link
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Already a Member?',
-                              style: GoogleFonts.poppins(
-                                fontSize: 13,
-                                color: Colors.white70,
-                              ),
-                            ),
-                            const SizedBox(width: 6),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Text(
-                                'Sign In',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                         // Already a Member + Sign In link
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                           children: [
+                             Text(
+                               'Already a Member?',
+                               style: GoogleFonts.poppins(
+                                 fontSize: 13,
+                                 color: Colors.white70,
+                               ),
+                             ),
+                             const SizedBox(width: 6),
+                             GestureDetector(
+                               onTap: () {
+                                 Navigator.push(
+                                   context,
+                                   MaterialPageRoute(
+                                     builder: (_) => const SigninScreen(),
+                                   ),
+                                 );
+                               },
+                               child: Text(
+                                 'Sign In',
+                                 style: GoogleFonts.poppins(
+                                   fontSize: 13,
+                                   fontWeight: FontWeight.w700,
+                                   color: Colors.white,
+                                   decoration: TextDecoration.underline,
+                                   decorationColor: Colors.white,
+                                 ),
+                               ),
+                             ),
+                           ],
+                         ),
 
                         const SizedBox(height: 16),
 
@@ -132,7 +140,7 @@ class LoginScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (_) => const SigninScreen(),
+                                  builder: (_) => const SignupScreen(),
                                 ),
                               );
                             },
